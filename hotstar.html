@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hotstar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img{
+          border-radius: 5px;
+      }
+       .wrap {
+        position: absolute;
+        top: 6%;
+        left: 2%;
+        transform: translate(-50%, -100%);
+      }
+      .menu {
+        width: 30px;
+        height: 2px;
+        background-color: grey;
+        margin: 6px 0px;
+      }
+      ul {
+        list-style-type: none;
+        z-index: 5;
+      }
+      ul li {
+          
+        float: left;
+        width: 70px;
+        margin: 9px;
+       height: 5px;
+        font-size: 20px;
+        text-align: center;
+        z-index: 5;
+       
+       
+      }
+      
+      ul li img{
+        transform: translate(-30%, -27%);
+        z-index: 5;
+      }
+      ul li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        z-index: 5;
+       
+      }
+      ul li a:hover {
+        background-color: #00091a;
+        z-index: 5;
+        
+      }
+      ul li ul li {
+        display: none;
+        z-index: 5;
+      
+      }
+      ul li:hover ul li {
+        display: block;
+        background-color:#040b1a ;
+        height: 5%;
+        font-size: 20px;
+       z-index: 5;
+        color: white;
+      }
+      #page{
+          float: right; 
+          position: relative;
+          padding: 30px;
+          display: inline-flex;
+        }
+       /* #button{
+            position: absolute;
+        display:inline-block;
+      
+        transform: translate(-80%, -120%);
+        }
+        #login{
+           text-align: left;
+           transform: translate(15%, 0%);
+        }*/
+        .latest {
+  margin-top: 10px;
+  max-height: 240px;
+  display: flex;
+  margin-left: 20px;
+}
+.quix {
+  margin-top: 10px;
+  max-height: 240px;
+  display: flex;
+  margin-left: 20px;
+}
+.recomended{
+  margin-top: 10px;
+  max-height: 240px;
+  display: flex;
+  margin-left: 20px;
+}
+.popular{
+  margin-top: 10px;
+  max-height: 240px;
+  display: flex;
+  margin-left: 20px;
+}
+.kids{
+  margin-top: 10px;
+  max-height: 240px;
+  display: flex;
+  margin-left: 20px;
+}
+        #i1:hover,#i2:hover,#i3:hover,#i4:hover,#i5:hover,#i6:hover,#i7:hover,#i8:hover{
+          transform: scale(1.3);
+          z-index: 2;
+        }
+ #i11:hover,#i22:hover,#i33:hover,#i44:hover,#i55:hover,#i66:hover,#i77:hover,#i88:hover{
+          transform: scale(1.3);
+          z-index: 2;
+        }
+      
+ #i111:hover,#i222:hover,#i333:hover,#i444:hover,#i555:hover,#i666:hover,#i777:hover,#i888:hover{
+          transform: scale(1.3);
+          z-index: 2;
+        }
+ #i1111:hover,#i2222:hover,#i3333:hover,#i4444:hover,#i5555:hover,#i6666:hover,#i7777:hover,#i8888:hover{
+          transform: scale(1.3);
+          z-index: 2;
+        }
+  #i11111:hover,#i22222:hover,#i33333:hover,#i44444:hover,#i55555:hover,#i66666:hover,#i77777:hover,#i88888:hover{
+          transform: scale(1.3);
+          z-index: 2;
+  }
+  #v {
+        margin-left: 2%;
+      }
+      #c {
+        margin-left: 2%;
+      }
+      #n {
+        margin-left: 2%;
+      }
+      #bv {
+        margin-left: 2%;
+      }
+      #cv {
+        margin-left: 2%;
+      }
+      a{
+        text-decoration: none;
+        color: white;
+      }
+      #pr,#fb,#playstore{
+          display: inline-block;
+          margin: 20px;
+      }
+    }
+      .slider {
+       
+        height: 400px;
+        z-index: 5;
+      }
+      .slider figure div {
+        float: left;
+        width: 20%;
+        z-index: 5;
+        
+      }
+      .slider figure img {
+        width: 100%;
+        z-index: 5;
+       
+        
+      }
+      .slider figure {
+        position:relative;
+        width: 500%;
+        margin: 0px;
+        left: 0;
+        animation: 10s tej infinite;
+        z-index: 5;
+     
+      }
+      @keyframes tej {
+        0% {
+          left: 0%;
+        }
+        10% {
+          left: 0%;
+        }                                          
+        12% {                                          
+          left: -100%;                                          
+        }                                          
+        22% {                                          
+          left: -100%;                                          
+        }                                          
+        24% {                                          
+          left: -200%;                                          
+        }                                          
+        34% {                                          
+          left: -200%;                                          
+        }                                          
+        36% {                                          
+          left: -300%;                                          
+        }                                          
+        46% {                                          
+          left: -300%;                                          
+        }                                          
+        48% {
+          left: -400%;
+        }
+        58% {
+          left: -400%;
+        }
+       /* 60% {
+          left: -300%;
+        }
+        70% {
+          left: -300%;
+       }
+        72% {
+          left: -200%;
+        }
+        82% {
+          left: -200%;
+        }
+        84% {
+          left: -100%;
+        }
+        94% {
+          left: -100%;
+        }
+        96% {
+          left: 0%;
+        }*/
+      }
+      /*#sp {
+        position: absolute;
+         margin-bottom: 20%;
+        font-size: 60px;
+        font-weight: bold;
+        
+        cursor: pointer;
+        left: -0.5%;
+        z-index: 1;
+      }
+      #sp:nth-of-type(2) {
+        left: 98%;
+        text-align: right;
+      }
+      main {
+       
+        
+        overflow: hidden;
+        position: relative;
+      }
+      section {
+        width: 98%;
+        height: 300px;
+        background:#00091a ;
+        margin: 10px auto;
+        display: flex;
+        justify-content: left;
+        overflow-x: auto;
+      }
+      section::-webkit-scrollbar {
+        visibility: hidden;
+      }*/
+       
+      
+       
+     
+      
+      
+    </style>
+  </head>
+  <body style="background-color: #00091a; color: white">
+    <ul>
+        <li><a href="#"><div class="menu-bar">
+      
+        
+            <div class="wrap">
+              <div class="menu"></div>
+              <div class="menu"></div>
+              <div class="menu"></div>
+            </div></a>
+            <ul><br>
+                <li><a href="#">Channels</a></li><br><br>
+                <li><a href="#">Languages</a></li><br><br>
+                <li><a href="#">Genres</a></li><br><br>
+            </ul>
+        </li>
+       <li><a href="#"><img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"></a></li>
+      <li><a href="#">Tv</a>
+        <ul>
+            <li><a href="#" >HotstarSpecials</a></li><br>
+            <li><a href="#" >Quix</a></li><br>
+            <li><a href="#" >starjalsha</a></li><br>
+            <li><a href="#" >starplus</a></li><br>
+            <li><a href="#">starvijay</a></li><br>
+            <li><a href="#">starbharath</a></li><br>
+            <li><a href="#">Asianet</a></li><br>
+            <li><a href="#">Starmaa</a></li><br>
+            <li><a href="#">more...</a></li><br>
+        </ul>
+     </li>
+      <li><a href="#">Movies</a>
+        <ul>
+            <li><a href="#">Telugu</a></li><br>
+            <li><a href="#">Tamil</a></li><br>
+            <li><a href="#">Hindi</a></li><br>
+            <li><a href="#">English</a></li><br>
+            <li><a href="#">Malyalam</a></li><br>
+            <li><a href="#">Kannada</a></li><br>
+            <li><a href="#">Bengali</a></li><br>
+            
+        </ul>
+    </li>
+      <li><a href="#">Sports</a>
+    <ul>
+        <li><a href="#">Cricket</a></li><br>
+        <li><a href="#">Tennis</a></li><br>
+        <li><a href="#">Formula 1</a></li><br>
+        <li><a href="#">Football</a></li><br>
+        <li><a href="#">Batminton</a></li><br>
+        <li><a href="#">eSports</a></li><br>
+        <li><a href="#">Hockey</a></li><br>
+        <li><a href="#">Golf</a></li><br>
+        <li><a href="#">Wrestling</a></li><br>
+        <li><a href="#">Kabaddi</a></li><br>
+        <li><a href="#">Tabletennis</a></li><br>
+        <li><a href="#">KheloIndia</a></li><br>
+    </ul>   
+    </li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Premium</a></li>
+      <li><a href="#">Disney+<div style="text-align: center;color: blue;font-size: 10px;">NEW</div></a></li>
+      <li><a href="#" style="color: gold; ">Kids</a></li>
+    
+    <div id="page">
+        <span id="search"
+        ><input
+          class="input-open"
+          type="search"
+          placeholder="Search"
+          
+      /></span>
+      <a href="subscription.html"> <div id="button"
+        ><button
+          style="background-color: blue; cursor: pointer"
+          type="button"
+        >
+          Subscribe
+        </button></div
+      ></a>
+      <span role="presentation" id="login">LOGIN </span>
+    </ul>
+    <br />
+    <br />
+    <div class="slider">
+      <figure>
+        <div class="slide"><a href="https://www.hotstar.com/in/tv/live-telecast/1260024786"><img src="photos/livetelecast.PNG" alt="" /></a></div>
+        <div class="slide"><a href="https://www.hotstar.com/in/tv/mahadev/12"><img src="photos/mahadev.PNG" alt="" /></a></div>
+        <div class="slide"><a href="https://www.hotstar.com/in/tv/crime-next-door/1260062944"><img src="photos/crime.PNG" alt="" /></a></div>
+        <div class="slide"><a href="https://www.hotstar.com/in/tv/grahan/1260063718"><img src="photos/grahan.PNG" alt="" /></a></div>
+        <div class="slide"><a href="https://www.hotstar.com/in/movies/vikram-vedha/1000216088"><img src="photos/vikramPNG.PNG" alt="" /></a></div>
+      </figure>
+    </div>
+    <br><br>
+    <p><h2>Latest & Trending</h2></p>
+    <main>
+      <section>
+    <div class="latest">
+      <span id="sp">&#139;</span>
+      <span id="sp">&#155;</span>
+        <a href="https://www.hotstar.com/in/movies/shaadisthan/1260063611"><img src="photos/shaadishan.jpg" id="i1"height="215px"></a>
+        <a href="https://www.hotstar.com/in/tv/loki/1260063451"><img src="photos/loki.jpg" id="i2" height="215px"></a>
+       <a href="https://www.hotstar.com/in/tv/loki/1260063451"><img src="photos/thamanna.png" id="i3" height="215px"></a>
+       <a href="https://www.hotstar.com/in/movies/hum-bhi-akele-tum-bhi-akele/1260062077"><img src="photos/humbe.jpg" id="i4" height="215px"></a>
+       <a href="https://www.hotstar.com/in/tv/out-of-love/1260013972"><img src="photos/outoflove.jpg" id="i5" height="215px"></a>
+       <a href="https://www.hotstar.com/in/movies/the-big-bull/1260036203"><img src="photos/bigbull.jpg" id="i6" height="215px"></a>
+       <a href="https://www.hotstar.com/in/tv/ok-computer/1260055914"><img src="photos/ok.jpg" id="i7" height="215px"></a>
+       <a href="https://www.hotstar.com/in/movies/1232-kms/1260056599"><img src="photos/1232.jpg" id="i8" height="215px"></a>
+      </div>
+      </section>
+      </main>
+      <p><h2>Quix: Chhote Episodes, Free Har Roz</h2></p>
+    <div class="quix">
+     <a href="https://www.hotstar.com/in/tv/six/1260062942"><img src="photos/1.jpg" alt="" id="i11" height="215px"></a>
+     <a href="https://www.hotstar.com/in/tv/target/1260056953"> <img src="photos/2.jpg" alt="" id="i22" height="215px"></a>
+    <a href="https://www.hotstar.com/in/tv/the-return/1260056671">  <img src="photos/3.jpg" alt="" id="i33" height="215px"></a>
+    <a href="https://www.hotstar.com/in/tv/chattis-aur-maina/1260062940">  <img src="photos/4.jpg" alt="" id="i44" height="215px"></a>
+     <a href="https://www.hotstar.com/in/tv/crime-next-door/1260062944"> <img src="photos/5.jpg" alt="" id="i55" height="215px"></a>
+    <a href="https://www.hotstar.com/in/tv/life-love-siyaapa/1260058837">  <img src="photos/6.png" alt="" id="i66" height="215px"></a>
+    <a href="https://www.hotstar.com/in/tv/bhopal-to-vegas/1260062938"> <img src="photos/7.jpg" alt="" id="i77" height="215px"></a>
+     <a href="https://www.hotstar.com/in/tv/emotional-atyachaar/1260061369"> <img src="photos/8.jpg" alt="" id="i88" height="215px"></span></a>
+    </div>
+    <p><h2>Movies Recommended For You</h2></p>
+    <div class="recomended">
+     <a href="https://www.hotstar.com/in/movies/baaghi-3/1260025583"> <img src="photos/11.jpg" alt=""  id="i111" height="215px"></a>
+      <img src="photos/22.jpg" alt=""  id="i222" height="215px">
+      <img src="photos/33.jpg" alt=""  id="i333" height="215px">
+      <img src="photos/44.jpg" alt=""  id="i444" height="215px">
+      <img src="photos/55.jpg" alt=""  id="i555" height="215px">
+      <img src="photos/66.jpg" alt=""  id="i666" height="215px">
+      <img src="photos/77.jpg" alt=""  id="i777" height="215px">
+      <img src="photos/99.jpg" alt=""  id="i888" height="215px">
+    </div>
+    <p><h2>Popular Movies</h2></p>
+    <div class="popular">
+      <img src="photos/111.jpg"  alt="" id="i1111" height="215px">
+      <img src="photos/222.jpg"  alt="" id="i2222" height="215px">
+      <img src="photos/333.jpg"  alt="" id="i3333" height="215px">
+      <img src="photos/444.jpg"  alt="" id="i4444" height="215px">
+      <img src="photos/555.jpg"  alt="" id="i5555" height="215px">
+      <img src="photos/666.jpg"  alt="" id="i6666" height="215px">
+      <img src="photos/777.jpg"  alt="" id="i7777" height="215px">
+      <img src="photos/888.jpg"  alt="" id="i8888" height="215px">
+    </div>
+    <p><h2>Best of Kids</h2></p>
+    <div class="kids">
+      <img src="photos/1111.jpg"  alt="" id="i11111" height="215px">
+      <img src="photos/2222.jpg"  alt="" id="i22222" height="215px">
+      <img src="photos/3333.png"  alt="" id="i33333" height="215px">
+      <img src="photos/4444.jpg"  alt="" id="i44444" height="215px">
+      <img src="photos/5555.jpg"  alt="" id="i55555" height="215px">
+      <img src="photos/6666.jpg"  alt="" id="i66666" height="215px">
+      <img src="photos/7777.jpg"  alt="" id="i77777" height="215px">
+      <img src="photos/8888.png"  alt="" id="i88888" height="215px">
+    </div>
+    <br>
+    <br>
+    <footer>
+
+      <a href="about.html"><span id="ab">About Disney+Hotstar</span></a>
+      <span id="v"> Terms Of Use</span>
+      <span id="c"> Privacy policy</span>
+      <span id="n">FAQ</span>
+      <span id="bv">Feedback</span>
+      <span id="cv">Careers</span>
+      <br />
+      <br />
+      <span id="pr">
+        © 2021 STAR. All Rights Reserved. HBO, Home Box Office and all related
+        channel and programming logos are service<br />
+        marks of, and all related programming visuals and elements are the
+        property of, Home Box Office, Inc. All rights <br />reserved.
+      </span>
+      <div id="fb">
+      <p>Connect with us</p>
+     <a href="https://www.facebook.com/DisneyPlusHotstar"><img src="photos/nfb.PNG" alt="facebook" height="40px" /></a>
+     <a href="https://twitter.com/DisneyPlusHS"><img src="photos/twitter.PNG" alt="twitter" height="40px" /></a>
+      </div>
+      <div id="playstore">
+      <p>Disney+ Hotstar App</p>
+      <a href="https://play.google.com/store/apps/details?id=in.startv.hotstar"><img src="photos/playstore.PNG" alt="playstore" height="40px" /></a>
+      <a href="https://itunes.apple.com/in/app/hotstar/id934459219?mt=8"><img src="photos/appstore.PNG" alt="appstore" height="40px" /></a>
+      </div> 
+  
+      </footer>
+      <script type="text/javascript">
+        var span = document.getElementsById("sp");
+        var div = document.getElementsById("div");
+        var l = 0;
+        span[1].onclick = () => {
+          l++;
+          for (var i of div) {
+            if (l == 0) {
+              i.style.left = "0px";
+            }
+            if (l == 1) {
+              i.style.left = "-740px";
+            }
+            if (l == 2) {
+              i.style.left = "-1480px";
+            }
+            if (l == 3) {
+              i.style.left = "-2220px";
+            }
+            if (l == 4) {
+              i.style.left = "-2960px";
+            }
+            if (l > 4) {
+              l = 4;
+            }
+          }
+        };
+        span[0].onclick = () => {
+          l--;
+          for (var i of div) {
+            if (l == 0) {
+              i.style.left = "0px";
+            }
+            if (l == 1) {
+              i.style.left = "-740px";
+            }
+            if (l == 2) {
+              i.style.left = "-1480px";
+            }
+            if (l == 3) {
+              i.style.left = "-2220px";
+            }
+            if (l < 0) {
+              l = 0;
+            }
+          }
+        };
+      </script>
+      
+  </body>
+</html>
